@@ -3,21 +3,57 @@ import express from "express";
 export const route = express.Router();
 
 route.get('/', (req, res)=>{
-    res.send("Hi there");
+    try {
+        res.send("Hi there");
+    } catch (error) {
+        console.log(new Error("error code"))
+    }
 })
 
 route.post('/', (req, res)=>{
-    res.send(req.body.name);
+    try {
+        res.send(req.body.name);
+    } catch (error) {
+        console.log(new Error("error code"));
+    }
 })
 
 route.put('/', (req, res) => {
-    res.send(req.body.name);
+    try {
+        res.send(req.body.name);
+    } catch (error) {
+        console.log(new Error("error code"));
+    }
 })
 
 route.delete('/', (req, res) => {
-    res.send(req.body.data["this data"]);
+    try {
+        res.send(req.body.data["this data"]);
+    } catch (error) {
+        console.log(new Error("error code"));
+    }
 })
 
 route.patch('/', (req, res) => {
-    res.send(req.body.resource)
+    try {
+        res.send(req.body.resource)
+    } catch (error) {
+        console.log(new Error("error code"));
+    }
+})
+
+route.options('/', (req, res) => {
+    try {
+        res.send("Main title material");
+    } catch (error) {
+        console.log(new Error("error code"));
+    }
+})
+
+route.head('/', (req, res) => {
+    try {
+        res.send()
+    } catch (error) {
+        
+    }
 })
