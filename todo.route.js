@@ -52,8 +52,8 @@ route.options('/', (req, res) => {
 
 route.head('/', (req, res) => {
     try {
-        res.send()
+        res.send("Head resource")
     } catch (error) {
-        
+        console.log(new Error("error code"));
     }
 })
